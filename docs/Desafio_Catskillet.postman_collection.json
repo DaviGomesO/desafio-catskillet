@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "9ea64b16-02de-40c7-9807-252a068a856a",
+		"name": "Desafio Catskillet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36622059"
+	},
+	"item": [
+		{
+			"name": "list tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzNjYzNDYyLCJpYXQiOjE3NTM2NTk4NjIsImp0aSI6ImM5NWE4ZGRhNTk5NjQzZDc5ZmFhMmEwNzFmNjI2M2E3IiwidXNlcl9pZCI6IjIifQ.RoC6Dw84AS1jiqvkSj5vmTF9dEjEn-8emMa-LhHoX6U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/tasks/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzNjYzNDYyLCJpYXQiOjE3NTM2NTk4NjIsImp0aSI6ImM5NWE4ZGRhNTk5NjQzZDc5ZmFhMmEwNzFmNjI2M2E3IiwidXNlcl9pZCI6IjIifQ.RoC6Dw84AS1jiqvkSj5vmTF9dEjEn-8emMa-LhHoX6U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Atividade criada hoje\",\r\n    \"description\": \"Criado no postman\",\r\n    \"execution_date\": \"2025-07-28\",\r\n    \"status\": \"P\",\r\n    \"categories\": [2]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/tasks/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzNjYzNDYyLCJpYXQiOjE3NTM2NTk4NjIsImp0aSI6ImM5NWE4ZGRhNTk5NjQzZDc5ZmFhMmEwNzFmNjI2M2E3IiwidXNlcl9pZCI6IjIifQ.RoC6Dw84AS1jiqvkSj5vmTF9dEjEn-8emMa-LhHoX6U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/tasks/1/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzNjYyMzExLCJpYXQiOjE3NTM2NTg3MTEsImp0aSI6IjE3NzAwNDExNjA3ZDQ3ODhiZjg5MTVjZGZiMTQ5ZmJkIiwidXNlcl9pZCI6IjIifQ.6GrDbzShMSJM-IAk_Yv1xLQq-IKroSRgVBAAUK3lRpM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Atividade concluida no postman\",\r\n    \"description\": \"Atualizado no teste agora\",\r\n    \"execution_date\": \"2025-07-27\",\r\n    \"status\": \"C\",\r\n    \"categories\": [\r\n        2\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/tasks/2/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"davites\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/token/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1Mzc0NjI2MiwiaWF0IjoxNzUzNjU5ODYyLCJqdGkiOiI3NDIyMTRjNjhlZWY0NmMzOTc5NmRiMTUyNjAyNzQwMiIsInVzZXJfaWQiOiIyIn0.0NH4P72ykQRCqHlSq19WGGKKF70eR4DUfG7Jn6HILQY\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/token/refresh/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agenda",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUzNjYzNDYyLCJpYXQiOjE3NTM2NTk4NjIsImp0aSI6ImM5NWE4ZGRhNTk5NjQzZDc5ZmFhMmEwNzFmNjI2M2E3IiwidXNlcl9pZCI6IjIifQ.RoC6Dw84AS1jiqvkSj5vmTF9dEjEn-8emMa-LhHoX6U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/tasks/agenda/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"agenda",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"davites\",\r\n    \"email\": \"davi@teste.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/register/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000/",
+			"type": "default"
+		}
+	]
+}
