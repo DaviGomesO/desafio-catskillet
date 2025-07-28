@@ -23,7 +23,7 @@ cd desafio-catskillet
    ENGINE=django.db.backends.postgresql
    NAME=railway
    USER=postgres
-   PASSWORD=kjzaytVcxliSlntLkmgpzSkdivRYTgGF
+   PASSWORD=<DB_PASS>
    HOST=db
    PORT=5432
 
@@ -32,8 +32,8 @@ cd desafio-catskillet
 
    # Mailtrap (testes de e-mail)
    EMAIL_HOST=sandbox.smtp.mailtrap.io
-   EMAIL_HOST_USER=57096c51e71226
-   EMAIL_HOST_PASSWORD=a5da974cb625d2
+   EMAIL_HOST_USER=<host_user_mailtrap>
+   EMAIL_HOST_PASSWORD=<host_pass_mailtrap>
    EMAIL_PORT=2525
    DEFAULT_FROM_EMAIL=no-reply@tasks.com
 
