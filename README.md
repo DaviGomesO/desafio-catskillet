@@ -3,8 +3,6 @@
 Este README descreve como configurar, executar e testar a **API de Tarefas** utilizando **Docker** e **Postman**.
 
 ---
-
----
 ## Configurações inicias
 ### 1. Clonar o repositório
 
@@ -39,9 +37,6 @@ cd desafio-catskillet
    EMAIL_PORT=2525
    DEFAULT_FROM_EMAIL=no-reply@tasks.com
 
-   # JWT (em minutos)
-   ACCESS_TOKEN_LIFETIME=60
-   REFRESH_TOKEN_LIFETIME=1440
    ```
 
 ---
